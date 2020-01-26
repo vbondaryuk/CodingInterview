@@ -28,8 +28,6 @@ namespace CodingInterview.Coding.Tasks
     {
         public bool IsSubtree(TreeNode s, TreeNode t)
         {
-            var q = 10;
-            var q1 = new int[q];
             return s != null && (Equals(s,t) || IsSubtree(s.right, t) || IsSubtree(s.left, t));
         }
 

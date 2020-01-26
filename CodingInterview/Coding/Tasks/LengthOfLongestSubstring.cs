@@ -8,8 +8,8 @@ namespace CodingInterview.Coding.Tasks
     public class LengthOfLongestSubstringTest
     {
         [TestMethod]
-        [DataRow("tammag", 3, DisplayName = "abcabc")]
-        [DataRow("tmsmfdut", 6, DisplayName = "abcabc")]
+        [DataRow("tammag", 3)]
+        [DataRow("tmsmfdut", 6)]
         public void Test(string s, int expected)
         {
             var substringFinder = new SubstringFinder();

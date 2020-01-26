@@ -108,7 +108,7 @@ namespace CodingInterview.Coding.Graph
             return ordered;
         }
 
-        public int DFS(
+        private static int DFS(
             int index,
             int orderIndex,
             int[] ordered,
