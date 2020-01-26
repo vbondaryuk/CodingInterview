@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CodingInterview.Coding.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CodingInterview.Coding.Graph
@@ -31,7 +32,6 @@ namespace CodingInterview.Coding.Graph
         [TestMethod]
         public void Test_Adjacency_list()
         {
-
             //      0
             //   1 / \ 20
             //    1 - 2
@@ -172,18 +172,6 @@ namespace CodingInterview.Coding.Graph
 
         }
         #endregion
-    }
-
-    public class WeightedNode
-    {
-        public int To { get; }
-        public int Cost { get; }
-
-        public WeightedNode(int to, int cost)
-        {
-            To = to;
-            Cost = cost;
-        }
     }
 
     //https://gist.github.com/irsal/5589011
