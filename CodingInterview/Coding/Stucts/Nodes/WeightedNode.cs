@@ -1,4 +1,4 @@
-﻿namespace CodingInterview.Coding.Tasks
+﻿namespace CodingInterview.Coding.Stucts.Nodes
 {
 
     public class WeightedNode

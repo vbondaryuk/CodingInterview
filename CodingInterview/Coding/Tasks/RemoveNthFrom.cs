@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using CodingInterview.Coding.Stucts.Nodes;
 
 namespace CodingInterview.Coding.Tasks
 {

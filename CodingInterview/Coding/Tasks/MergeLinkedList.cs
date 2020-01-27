@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using CodingInterview.Coding.Stucts.Nodes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CodingInterview.Coding.Tasks

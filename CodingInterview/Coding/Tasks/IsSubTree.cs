@@ -1,4 +1,5 @@
-﻿using CodingInterview.Utils;
+﻿using CodingInterview.Coding.Stucts.Nodes;
+using CodingInterview.Utils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CodingInterview.Coding.Tasks
