@@ -123,6 +123,9 @@ namespace CodingInterview.Coding.Tasks.DataStructure
                             break;
                     }
 
+                    if (node == null)
+                        continue;
+
                     if (node.IsEnd && maxWeight < node.Weight)
                         maxWeight = node.Weight;
                 }
