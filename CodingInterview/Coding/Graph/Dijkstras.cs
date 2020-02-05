@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using CodingInterview.Coding.Stucts;
 using CodingInterview.Coding.Stucts.Nodes;
 using CodingInterview.Coding.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -173,35 +173,5 @@ namespace CodingInterview.Coding.Graph
 
         }
         #endregion
-    }
-
-    //https://gist.github.com/irsal/5589011
-    public class PriorityQueue<TKey, TKeyCost>
-    {
-        private readonly SortedDictionary<TKeyCost, Queue<TKey>> _dict = new SortedDictionary<TKeyCost, Queue<TKey>>();
-
-        public int Count() => _dict.Count;
-
-        public (TKey, TKeyCost) Dequeue()
-        {
-            var key = _dict.Keys.First();
-            var keysQueue = _dict[key];
-            if (keysQueue.Count == 1)
-            {
-                _dict.Remove(key);
-            }
-
-            return (keysQueue.Dequeue(), key);
-        }
-
-        public void Enqueue(TKey key, TKeyCost cost)
-        {
-            if (!_dict.TryGetValue(cost, out var keyQueue))
-            {
-                keyQueue = new Queue<TKey>();
-                _dict.Add(cost, keyQueue);
-            }
-            keyQueue.Enqueue(key);
-        }
     }
 }
