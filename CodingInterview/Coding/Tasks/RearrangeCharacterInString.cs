@@ -37,6 +37,8 @@ namespace CodingInterview.Coding.Tasks
 
             Input: aaaabc 
             Output: Not Possible
+
+            https://www.geeksforgeeks.org/rearrange-characters-string-no-two-adjacent/
          */
         #endregion
         private static string RearrangeCharacterInString(string str)

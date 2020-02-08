@@ -27,8 +27,7 @@ namespace CodingInterview.Coding.Tasks
 
     public class Bomberman
     {
-        public static readonly int[,] Direction = new[,]
-        {
+        private static readonly int[,] Direction = {
             {-1, 0},
             {1, 0},
             {0, -1},
