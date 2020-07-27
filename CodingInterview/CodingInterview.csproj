@@ -11,4 +11,13 @@
     <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Coding\Tasks\TestData\journey-to-the-moon.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Coding\Tasks\TestData\journey-to-the-moon_2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
