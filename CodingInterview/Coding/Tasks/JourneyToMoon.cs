@@ -31,7 +31,7 @@ namespace CodingInterview.Coding.Tasks
         [TestMethod]
         [DataRow(@"Coding\Tasks\TestData\journey-to-the-moon.txt")]
         [DataRow(@"Coding\Tasks\TestData\journey-to-the-moon_2.txt")]
-        public void TestFromFIle(string fileName)
+        public void TestFromFile(string fileName)
         {
             var data = TestDataParser.Parse<AstoInfo>((option)=>
             {
@@ -46,21 +46,22 @@ namespace CodingInterview.Coding.Tasks
                         var pairs = int.Parse(datas[1]);
                         astoInfo.AstroCount = int.Parse(datas[0]);
                         astoInfo.ExpectedResult = int.Parse(datas[2]);
-                        astoInfo.Astronauts = new int[pairs][];
+                        astoInfo.Input = new int[pairs][];
                     }
                     else
                     {
                         var astro1 = int.Parse(datas[0]);
                         var astro2 = int.Parse(datas[1]);
-                        astoInfo.Astronauts[lineNumber - 1] = new[] {astro1, astro2};
+                        astoInfo.Input[lineNumber - 1] = new[] {astro1, astro2};
                     }
                 };
             });
 
-            var result = journeyToMoon(data.AstroCount, data.Astronauts);
+            var result = journeyToMoon(data.AstroCount, data.Input);
 
             Assert.AreEqual(data.ExpectedResult, result);
         }
+
         //https://www.hackerrank.com/challenges/journey-to-the-moon/problem
         static int journeyToMoon(int n, int[][] astronaut)
         {
@@ -140,13 +141,9 @@ namespace CodingInterview.Coding.Tasks
             return countryToAstroMap;
         }
 
-
-
-        private class AstoInfo
+        private class AstoInfo : TestData<int[][], int>
         {
             public int AstroCount { get; set; }
-            public int ExpectedResult { get; set; }
-            public int[][] Astronauts { get; set; }
         }
     }
 }

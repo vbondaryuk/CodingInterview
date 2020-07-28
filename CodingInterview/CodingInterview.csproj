@@ -12,10 +12,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Coding\Tasks\TestData\luck-balance.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Coding\Tasks\TestData\journey-to-the-moon.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Coding\Tasks\TestData\journey-to-the-moon_2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Coding\Tasks\TestData\luck-balance_2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Coding\Tasks\TestData\luck-balance_3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

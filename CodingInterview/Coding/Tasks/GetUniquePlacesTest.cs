@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CodingInterview.Coding.Tasks

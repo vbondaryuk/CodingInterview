@@ -35,4 +35,10 @@ namespace CodingInterview.Utils
             public Func<string, T> Parse { get; set; }
         }
     }
+
+    public class TestData<TInput, TOutput>
+    {
+        public TOutput ExpectedResult { get; set; }
+        public TInput Input { get; set; }
+    }
 }
