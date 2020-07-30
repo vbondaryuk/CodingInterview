@@ -8,24 +8,11 @@ namespace CodingInterview.Coding.Tasks
     public class JourneyToMoon
     {
         [TestMethod]
-        public void Test()
+        [DynamicData(nameof(Data), DynamicDataSourceType.Method)]
+        public void TestDynamic(int n, int[][] astronaut, long expected)
         {
-            var astronaut = new int[7][];
-            astronaut[0] = new[] { 0, 2 };
-            astronaut[1] = new[] { 1, 8 };
-            astronaut[2] = new[] { 1, 4 };
-            astronaut[3] = new[] { 2, 8 };
-            astronaut[4] = new[] { 2, 6 };
-            astronaut[5] = new[] { 3, 5 };
-            astronaut[6] = new[] { 6, 9 };
-            var result = journeyToMoon(10, astronaut);
-
-            astronaut = new int[2][];
-            astronaut[0] = new[] { 1, 2 };
-            astronaut[1] = new[] { 3, 4 };
-
-            result = journeyToMoon(100000, astronaut);
-            Assert.AreEqual(4999949998, result);
+            var result = journeyToMoon(n, astronaut);
+            Assert.AreEqual(expected, result);
         }
 
         [TestMethod]
@@ -63,11 +50,11 @@ namespace CodingInterview.Coding.Tasks
         }
 
         //https://www.hackerrank.com/challenges/journey-to-the-moon/problem
-        static int journeyToMoon(int n, int[][] astronaut)
+        static long journeyToMoon(int n, int[][] astronaut)
         {
             Dictionary<int, HashSet<int>> countryToAstroMap = AstroByCountries(n, astronaut);
 
-            int result = 0;
+            long result = 0;
             int astroNumber = n;
             foreach (var countrySet in countryToAstroMap)
             {
@@ -144,6 +131,24 @@ namespace CodingInterview.Coding.Tasks
         private class AstoInfo : TestData<int[][], int>
         {
             public int AstroCount { get; set; }
+        }
+
+        public static IEnumerable<object[]> Data()
+        {
+            var astronaut = new int[7][];
+            astronaut[0] = new[] { 0, 2 };
+            astronaut[1] = new[] { 1, 8 };
+            astronaut[2] = new[] { 1, 4 };
+            astronaut[3] = new[] { 2, 8 };
+            astronaut[4] = new[] { 2, 6 };
+            astronaut[5] = new[] { 3, 5 };
+            astronaut[6] = new[] { 6, 9 };
+            yield return new object[]{10, astronaut, 23 };
+
+            astronaut = new int[2][];
+            astronaut[0] = new[] { 1, 2 };
+            astronaut[1] = new[] { 3, 4 };
+            yield return new object[] { 100000, astronaut, 4999949998 };
         }
     }
 }
