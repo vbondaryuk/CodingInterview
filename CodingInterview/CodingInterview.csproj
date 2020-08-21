@@ -15,6 +15,9 @@
     <None Update="Coding\Tasks\TestData\beautiful-pairs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Coding\Tasks\TestData\greedy-florist.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Coding\Tasks\TestData\candies.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
